@@ -56,7 +56,7 @@ function showQuestion(){
         button.classList.add("btn");
         answerButtons.appendChild(button);
         if(answer.correct){
-            button.dateset.correct = answer.correct;
+            button.dataset.correct = answer.correct;
         }
         button.addEventListener("click", selectAnswer);
     });
