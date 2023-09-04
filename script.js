@@ -26,6 +26,7 @@ const questions = [
             { text: "Africa", correct: false},
         ]
     }
+
 ];
 
 const questionElement = document.getElementById("question");
@@ -84,6 +85,23 @@ function selectAnswer(e){
     });
     nextButton.style.display = "block";
 }
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < question.length){
+        showQuestion();
+    }else{
+        showScore();
+    }
+}
+
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < question.length){
+        handleNextButton();
+    }else{
+        startQuiz();
+    }
+});
 
 startQuiz();
 
