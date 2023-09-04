@@ -43,8 +43,15 @@ function startQuiz(){
 }
 
 function showQuestion(){
-    let currentQuestion= questions[currentQuestionIndex];
+    let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.
     question;
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.InnerHTML = answer.text;
+        button.classList.add("btn");
+        answerButton.appendChild(button);
+    })
 }
