@@ -26,4 +26,6 @@ const questions = [
             { text: "Africa", correct: false},
         ]
     }
-]
+];
+
+const questionElement = document.getElementById("question");
