@@ -67,3 +67,11 @@ body{
     cursor: pointer;
     display: none;
 }
+
+.correct{
+    background: #9aeabc;
+}
+
+.incrrect{
+    background: #ff9393;
+}
